@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Fredoka:wght@400;500;600&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500&family=Urbanist:wght@400;500;600;700&display=swap');
+
+html { font-size: clamp(1rem, 2vw + 0.8rem, 3rem); }
+
+body {
+    background: #E9EAF8;
+    color: #202936;
+    font-family: "Urbanist", sans-serif;
+    font-size: 16px;
+    min-width: 320px;
+}
+
+.cabecalho {
+    width: calc(100% - 48px);
+    max-width: 1460px;
+    margin: 0 auto;
+    min-height: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img { width: 98px; display: block; }
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.menu a { color: #202936; }
+
+.botao-contato {
+    background: #747ED1;
+    color: white !important;
+    padding: 13px 22px;
+    border-radius: 30px;
+}
+
+main { width: calc(100% - 48px); max-width: 1460px; margin: 0 auto; }
+
+.banner {
+    height: 300px;
+    border-radius: 13px;
+    background: #51225E;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.banner h1 {
+    font-family: "Epilogue", sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 15px;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+.card {
+    background: #fff;
+    border-radius: 13px;
+    margin-bottom: 72px;
+}
+
+.web-design {
+    min-height: 300px;
+    padding: 60px 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 78px;
+}
+
+.web-design > img { width: 480px; max-width: 50%; }
+
+.web-design-texto h2 {
+    font-family: "Epilogue", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.web-design-texto p {
+    font-size: 12px;
+    line-height: 1.65;
+    margin-bottom: 18px;
+}
+
+.botao-detalhes {
+    display: inline-block;
+    padding: 11px 22px;
+    border-radius: 25px;
+    background: #E9EAF8;
+    color: #747ED1;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.processo {
+    min-height: 650px;
+    padding: 68px 40px 62px;
+    text-align: center;
+}
+
+.video {
+    display: block;
+    width: min(840px, 75%);
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0 auto 48px;
+    border-radius: 6px;
+}
+
+.processo > h2 {
+    font-family: "Epilogue", sans-serif;
+    font-size: 27px;
+    line-height: 1.18;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.processo > h2 span { color: #747ED1; text-decoration: underline; }
+
+.etapas {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.etapa { width: 210px; }
+
+.etapa img {
+    height: 38px;
+    width: 38px;
+    margin: 0 auto 13px;
+}
+
+.etapa h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 13px;
+}
+
+.etapa p {
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.rodape {
+    width: calc(100% - 48px);
+    max-width: 1460px;
+    min-height: 100px;
+    margin: 0 auto 28px;
+    border-radius: 13px;
+    background: #21262C;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 10px;
+}
+
+.redes { display: flex; align-items: center; gap: 12px; }
+.redes img { width: 13px; height: 13px; object-fit: contain; }
+
+@media screen and (max-width: 900px) {
+    .cabecalho { min-height: 90px; }
+    .menu { gap: 16px; font-size: 10px; }
+    .web-design { padding: 50px; gap: 40px; }
+    .web-design > img { width: 45%; }
+    .etapas { gap: 30px; }
+}
+
+@media screen and (max-width: 600px) {
+    .cabecalho { width: calc(100% - 28px); flex-direction: column; gap: 20px; padding: 22px 0; }
+    .menu { flex-wrap: wrap; justify-content: center; gap: 12px 16px; }
+    main, .rodape { width: calc(100% - 28px); }
+    .banner { height: 280px; margin-bottom: 35px; padding: 25px; }
+    .banner h1 { font-size: 30px; }
+    .banner p { font-size: 13px; }
+    .web-design { flex-direction: column; padding: 35px 25px; text-align: center; gap: 25px; }
+    .web-design > img { max-width: 100%; width: 90%; }
+    .processo { padding: 35px 20px; }
+    .video { width: 100%; margin-bottom: 30px; }
+    .processo > h2 { font-size: 21px; }
+    .etapas { flex-direction: column; align-items: center; gap: 30px; }
+}
